@@ -20,15 +20,16 @@
       :class="[{ wrapper_blur: centerShow }, 'wrapper', 'bg-blur']"
     >
       <div :class="['img_shadow', { img_shadow_show: imgLoded }]"></div>
-      <div class="inner" style="cursor: pointer" @click="goToBlog">
+<!--      <div class="inner" style="cursor: pointer" @click="goToBlog">-->
+        <div class="inner" >
         <img
           :class="['R_logo', { R_logo_top: flag }]"
-          src="../assets/logo.svg"
+          src="../assets/attpu-iedkg.svg"
         />
         <div :class="['hello', { hello_bottom: flag }]">
           <div>{{ slogan[i] }}</div>
           <div class="hello_bottom_text">
-            点击以访问 {{ $config.BLOG_NAME }}
+            {{ $config.BLOG_NAME }}
           </div>
         </div>
       </div>
@@ -244,7 +245,7 @@ export default {
     position: absolute;
     left: 0;
     top: 0;
-    background-color: #fda085;
+    background-color: rgba(153, 194, 144, 0.99);
     overflow: hidden;
     transition: all 0.5s;
   }

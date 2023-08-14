@@ -21,7 +21,7 @@
     <div class="scroll-wrapper main">
       <transition-group tag="div" class="row scroll-content" name="list">
         <div class="col page_item" v-for="item in pagesData" :key="item.pageId">
-          <a :href="item.url" class="page" :title="item.title">
+          <a :href="item.url" class="page" :title="item.title" target="_blank">
             <div class="left">
               <div class="title">{{ item.title }}</div>
               <div class="subtitle">{{ item.subtitle }}</div>
@@ -41,7 +41,7 @@
     </div>
     <div class="footer" v-if="$config.FOOTER_INFO">
       <i class="mdi mdi-fountain-pen-tip"></i> Designed By
-      <a href="https://github.com/EsunR/Blog-Index">EsunR</a>
+      <a href="https://github.com/NoahAmethyst">Lex.Margin</a>
     </div>
   </div>
 </template>
