@@ -27,5 +27,7 @@ WORKDIR /app
 
 COPY --from=builder /app ./
 
-CMD node server.js
+RUN yarn build
+
+CMD yarn run serve
 
