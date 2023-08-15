@@ -24,5 +24,5 @@ RUN yarn build
 FROM base AS runner
 WORKDIR /app
 
-CMD node server.js
+CMD yarn run serve
 
