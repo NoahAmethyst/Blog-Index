@@ -8,6 +8,7 @@ WORKDIR /app
 
 COPY package.json yarn.lock ./
 
+
 RUN yarn config set registry 'https://registry.npmmirror.com/'
 RUN yarn install
 
@@ -23,6 +24,8 @@ RUN yarn build
 
 FROM base AS runner
 WORKDIR /app
+
+COPY --from=builder /app ./
 
 CMD yarn run serve
 
