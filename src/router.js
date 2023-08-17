@@ -6,18 +6,19 @@ import center from './components/center.vue'
 Vue.use(Router)
 
 export default new Router({
-  routes: [
-    {
-      path: '*',
-      redirect: '/home'
-    },
-    {
-      path: '/home',
-      component: home
-    },
-    {
-      path: '/center',
-      component: center
-    }
-  ]
+    mode: 'history',
+    routes: [
+        // {
+        //   path: '*',
+        //   redirect: '/home'
+        // },
+        {
+            path: '/',
+            component: home
+        },
+        {
+            path: '/center',
+            component: center
+        }
+    ]
 })

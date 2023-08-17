@@ -6,6 +6,7 @@ import "./assets/mobile-event"
 import axios from 'axios'
 import VueAxios from 'vue-axios'
 import config from './config.js'
+import {store} from "core-js/library/modules/_metadata";
 
 Vue.prototype.$config = config;
 Vue.use(VueAxios, axios);
@@ -15,5 +16,6 @@ Vue.config.productionTip = false
 
 new Vue({
   router,
+  store,
   render: h => h(App)
 }).$mount('#app')
