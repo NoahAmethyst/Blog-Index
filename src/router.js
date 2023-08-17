@@ -6,7 +6,7 @@ import center from './components/center.vue'
 Vue.use(Router)
 
 export default new Router({
-    mode: 'history',
+    mode: 'hash',
     routes: [
         // {
         //   path: '*',
