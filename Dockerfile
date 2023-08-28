@@ -33,7 +33,7 @@ FROM nginx
 
 WORKDIR /app
 
-COPY --from=runner /app/disk ./
+COPY --from=runner /app/dist ./
 COPY nginx.conf /etc/nginx/nginx.conf
 
 
