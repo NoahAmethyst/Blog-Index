@@ -13,6 +13,10 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+      - name: Login Private Docker Repo
+        run: |
+          # login to aliCloud image repository
+          docker login --username=${{ secrets.DOCKER_USERNAME }} --password=${{ secrets.DOCKER_PASSWORD }} registry.cn-hangzhou.aliyuncs.com
       - uses: actions/checkout@v3
       - name: Build the Docker image
         run: docker build . --file Dockerfile --tag registry.cn-hangzhou.aliyuncs.com/lexmargin/domain:latest
@@ -20,6 +24,6 @@ jobs:
         run: |
           docker version
           # login to aliCloud image repository
-          docker login --username=${{ secrets.DOCKER_USERNAME }} --password=${{ secrets.DOCKER_PASSWORD }} registry.cn-hangzhou.aliyuncs.com
+          # docker login --username=${{ secrets.DOCKER_USERNAME }} --password=${{ secrets.DOCKER_PASSWORD }} registry.cn-hangzhou.aliyuncs.com
           # push image to aliCloud private repository
           docker push registry.cn-hangzhou.aliyuncs.com/lexmargin/domain:latest
