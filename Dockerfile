@@ -40,7 +40,7 @@ WORKDIR /app
 COPY --from=runner /app/dist ./
 COPY nginx.conf /etc/nginx/nginx.conf
 COPY --from=ChatgptWeb /app/public ./public
-COPY --from=ChatgptWeb /app/.next/standalone ./
+COPY --from=ChatgptWeb /app/standalone ./
 COPY --from=ChatgptWeb /app/.next/static ./.next/static
 COPY --from=ChatgptWeb /app/.next/server ./.next/server
 
