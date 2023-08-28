@@ -29,5 +29,14 @@ COPY --from=builder /app ./
 
 RUN yarn build
 
-CMD yarn run serve
+FROM nginx
+
+WORKDIR /app
+
+COPY --from=runner /app/disk ./
+COPY nginx.conf /etc/nginx/nginx.conf
+
+
+
+
 
