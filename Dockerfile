@@ -29,20 +29,13 @@ COPY --from=builder /app ./
 
 RUN yarn build
 
-
-FROM registry.cn-hangzhou.aliyuncs.com/lexmargin/chatgpt-web:latest AS ChatgptWeb
-WORKDIR /app
-
 FROM nginx
 
 WORKDIR /app
 
 COPY --from=runner /app/dist ./
+COPY --from=runner /app/public ./public
 COPY nginx.conf /etc/nginx/nginx.conf
-COPY --from=ChatgptWeb /app/public ./public
-COPY --from=ChatgptWeb /app/public/site.webmanifest ./
-COPY --from=ChatgptWeb /app/.next/static ./.next/static
-COPY --from=ChatgptWeb /app/.next/server ./.next/server
 
 
 
