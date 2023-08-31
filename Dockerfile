@@ -46,6 +46,7 @@ COPY --from=ChatgptWeb /app/.next/server ./.next/server
 COPY --from=ChatgptWeb /app/.next/static ./_next/static
 COPY --from=ChatgptWeb /app/.next/server ./_next/server
 COPY --from=ChatgptWeb /app/.next/server ./_next/server
+COPY --from=ChatgptWeb /app/.next/static ./static
 COPY --from=ChatgptWeb /app/public ./
 
 
