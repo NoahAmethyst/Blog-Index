@@ -43,6 +43,10 @@ COPY --from=ChatgptWeb /app/public ./public
 #COPY --from=ChatgptWeb /app/.next/standalone ./
 COPY --from=ChatgptWeb /app/.next/static ./.next/static
 COPY --from=ChatgptWeb /app/.next/server ./.next/server
+COPY --from=ChatgptWeb /app/.next/static ./_next/static
+COPY --from=ChatgptWeb /app/.next/server ./_next/server
+COPY --from=ChatgptWeb /app/.next/server ./_next/server
+COPY --from=ChatgptWeb /app/public ./
 
 
 COPY --from=runner /app/dist ./
