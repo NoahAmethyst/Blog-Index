@@ -38,7 +38,7 @@ FROM nginx
 
 WORKDIR /app
 
-ENV UPDATE=2
+ENV UPDATE=3
 
 # Copy chatgpt web resource
 COPY --from=ChatgptWeb /app/public ./public
