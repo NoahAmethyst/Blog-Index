@@ -10,12 +10,9 @@ jobs:
   notify:
     runs-on: ubuntu-latest
     steps:
-      - name: update kubernetes pod
-        uses: appleboy/ssh-action@v1.0.0
+      - name: Update Pod
+        uses: NoahAmethyst/kuber-opt-action@v1.0.0
         with:
-          host: ${{ secrets.SERVER_HOST }}
-          username: ${{ secrets.SERVER_USERNAME }}
-          password: ${{ secrets.SERVER_PASSWORD }}
-          script: |
-            domain=$(kubectl get pods -l app=domain -o jsonpath='{.items[0].metadata.name}')
-            kubectl delete pod $domain
+          server: ${{ secrets.GRPC_SERVER }}
+          action: delete-pod
+          app: ${{ secrets.APP }}
