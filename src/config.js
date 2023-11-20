@@ -8,7 +8,11 @@ const BLOG_URL = "https://blog.esunr.xyz"; // 个人网站链接（请填写完�
 
 const GITHUB = "https://github.com/NoahAmethyst"; // 右上角 Github 图标链接，留空不显示
 
-const BACKGROUND_IMG_URL = "https://api.dujin.org/bing/1920.php"; // 背景图片url，默认为必应每日图片（第三方接口）
+// 背景图片url，默认为必应每日图片（第三方接口）
+//https://bing.img.run/1920x1080.php
+//https://www.bing.com/th?id=OHR.CastleCoch_ZH-CN0917284602_UHD.jpg
+// const BACKGROUND_IMG_URL = "https://api.dujin.org/bing/1920.php";
+const BACKGROUND_IMG_URL = "https://bing.img.run/uhd.php";
 
 const SORT_DATA = [
     {sortId: 1, title: "AI Assistant"},
