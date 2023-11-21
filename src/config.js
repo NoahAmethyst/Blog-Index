@@ -12,7 +12,9 @@ const GITHUB = "https://github.com/NoahAmethyst"; // 右上角 Github 图标链�
 //https://bing.img.run/1920x1080.php
 //https://www.bing.com/th?id=OHR.CastleCoch_ZH-CN0917284602_UHD.jpg
 // const BACKGROUND_IMG_URL = "https://api.dujin.org/bing/1920.php";
-const BACKGROUND_IMG_URL = "https://bing.img.run/uhd.php";
+// https://bing.img.run/uhd.php
+
+const BACKGROUND_IMG_URL = "https://noahamethyst.club/gateway/spider/bing/wallpaper/random/redirect";
 
 const SORT_DATA = [
     {sortId: 1, title: "AI Assistant"},
