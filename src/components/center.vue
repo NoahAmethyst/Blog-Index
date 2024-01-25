@@ -47,7 +47,7 @@
     </template>
     <div class="footer" v-if="$config.FOOTER_INFO">
       <i class="mdi mdi-fountain-pen-tip"></i> Designed By
-      <a href="https://github.com/NoahAmethyst">Lex.Margin</a>
+      <a href="https://github.com/NoahAmethyst">Lex.Martin</a>
     </div>
   </div>
 </template>
